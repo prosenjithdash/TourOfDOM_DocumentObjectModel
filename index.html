@@ -1,5 +1,4 @@
 <!-- HTML  -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +11,6 @@
     <header>
         <h2>Javascript Dom</h2>
     </header>
-
     <main>
         <h4>Today we are learn Javascript DOM.</h4>
         <ul>
@@ -24,7 +22,26 @@
     <footer>
         <h5>copyright by pdp 2024</h5>
     </footer>
-
     <script src="JS/dom.js"></script>
+    <script>
+        ////24-2 Traversing Dom - GetElementsByTagName start.////
+        const d = document
+        console.log(d)
+        // output array like object 
+        const liCollection = document.getElementsByTagName('li');
+        console.log(liCollection)
+
+        // use loop but it is not a SAY array 
+
+        for(const li of liCollection){
+            console.log(li)
+
+            console.log(li.innerText)
+
+            console.log(li.innerHTML)
+        }
+
+        ////24-2 Traversing Dom - GetElementsByTagName end.////
+    </script>
 </body>
 </html>
