@@ -30,7 +30,7 @@
                 <li class="im-place">Ajom tila</li>
             </ul>
         </section>
-        <section>
+        <section class="uni-list">
             <h4>University Name of Bangladesh</h4>
             <ul>
                 <li>Daffodil International University</li>
@@ -48,6 +48,8 @@
     <script>
 
         ////24-2 Traversing Dom - GetElementsByTagName start.////
+
+        // Option: 01 GetElementsByTagName
 
         // const d = document
         // console.log(d)
@@ -67,17 +69,17 @@
 
         ////24-2 Traversing Dom - GetElementsByTagName end.////
 
-
+        //#############################################################//
 
         //// 24-3 Traversing Dom - GetElementByClass VS GetElementById start.////
 
-        // use getElementById
+        //  Option: 02 getElementById
         const useId = document.getElementById('id1')
         console.log(useId)
         useId.innerText = 'Right now i am learning JS Dom.'
          console.log(useId)
 
-        // use getElementsByClassName
+        //  Option: 03 getElementsByClassName
             const useClass = document.getElementsByClassName('im-place')
             console.log(useClass)
 
@@ -87,8 +89,44 @@
                 console.log(place.innerHTML)
             }
 
+        //// 24-3 Traversing Dom - GetElementByClass VS GetElementById End.////
+
+    //#############################################################//
+
+        // 24 - 4 Traversing Dom - GetElementByQuerySelector, QuerySelectorAll start//
+
+        // Option: 04 QuerySelectorAll
+
+        const qall = document.querySelectorAll('.uni-list li')
+        console.log(qall)
+
+        //loop
+
+        for(const li of qall){
+            console.log(li.innerText)
+        }
+
+        // Option: 05 QuerySelector
+        //get just first one
+
+            const q = document.querySelector('.uni-list li')
+            console.log(q)
+
+        // 24 - 4 Traversing Dom - GetElementByQuerySelector, QuerySelectorAll End//
+
+        // HTMLCollection VS NodeList =>
+        /*
+            HTMLCollection => Live Link , Not Use forEach , Use for of
+            NodeList => Static , Use forEach , use for of
+        */
 
 
+        //#############################################################//
+
+
+        
     </script>
 </body>
 </html>
+
+
